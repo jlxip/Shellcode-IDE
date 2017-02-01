@@ -1,7 +1,7 @@
 # Shellcode IDE
 An IDE for creating shellcodes.
 
-<img style="display: block; margin: 0 auto;" width="400" src="http://i.imgur.com/Y3mPlba.png">
+<h1 align="center"><img width="400" src="http://i.imgur.com/Y3mPlba.png"><br><br></h1>
 
 ## HOW TO
 Easy to use, just drag and drop.
