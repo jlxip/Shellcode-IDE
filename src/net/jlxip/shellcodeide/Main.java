@@ -40,7 +40,7 @@ public class Main extends JFrame {
 		setTitle("Shellcode IDE");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 574, 357);
+		setBounds(100, 100, 675, 357);
 		setLocationRelativeTo(null);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -129,7 +129,26 @@ public class Main extends JFrame {
 		});
 		btnRun.setBounds(379, 260, 57, 25);
 		contentPane.add(btnRun);
+		
+		JLabel lblTools = new JLabel("Tools");
+		lblTools.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTools.setBounds(568, 13, 31, 16);
+		contentPane.add(lblTools);
+		
+		JButton btnArwin = new JButton("Arwin");
+		btnArwin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(!checkExtension("arwin", "ARWIN")) return;
+				
+				new Arwin().setVisible(true);
+			}
+		});
+		btnArwin.setBounds(568, 42, 89, 25);
+		contentPane.add(btnArwin);
 	}
+	
+	
+	
 	
 	public void receiveFile(File file) {
 		if(!Pdot.split(file.getName())[1].equals("asm")) {
